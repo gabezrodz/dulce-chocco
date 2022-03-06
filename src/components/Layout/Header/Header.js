@@ -1,7 +1,7 @@
 import { HeaderStyled, MainImage } from "./Style";
 import Wrapper from "../../Helpers/Wrapper";
 import bannerChocolate from "../../../assets/image/banner-chocolate.png";
-import HeadderCartButton from "../Cart/CartButton";
+import HeadderCartButton from "../Cart/CartFeatures/CartButton";
 
 const Header = (props) => {
   return (

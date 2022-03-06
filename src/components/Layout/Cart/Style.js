@@ -1,81 +1,48 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
-export const CartButton = styled.button`
-  cursor: pointer;
-  border: none;
-  background-color: #672f0a;
-  color: white;
-  padding: 0.75rem 3rem;
+export const CartItemsStyled = styled.ul`
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 20rem;
+  overflow: auto;
+`;
+
+export const Total = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  border-radius: 25px;
-  font-size: 1.1rem;
   font-weight: bold;
-  font-family: "Fredoka", sans-serif;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+`;
 
-  &:hover,
-  &:active {
-    background-color: #89380c;
+export const Actions = styled.div`
+  text-align: right;
+
+  button {
+    font: inherit;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #672f0a;
+    padding: 0.5rem 2rem;
+    border-radius: 25px;
+    margin-left: 1rem;
+
+    &:hover,
+    &:active {
+      background-color: #89380c;
+      border-color: #89380c;
+      color: white;
+    }
+  }
+
+  & .button--alt {
+    color: #8a2b06;
+  }
+
+  & .button {
+    background-color: #672f0a;
+    color: white;
   }
 `;
-
-export const Icon = styled.span`
-  width: 1.35rem;
-  height: 1.35rem;
-  margin-right: 1rem;
-`;
-
-export const Badge = styled.span`
-  background-color: #2c0d00;
-  padding: 0.25rem 1rem;
-  border-radius: 25px;
-  margin-left: 1rem;
-  font-weight: bold;
-
-  &:hover,
-  &:active {
-    background-color: #4d1601;
-  }
-`;
-
-// const Bump = keyframes`
-// 0% {
-//     transform: scale(1);
-//   }
-//   10% {
-//     transform: scale(0.9);
-//   }
-//   30% {
-//     transform: scale(1.1);
-//   }
-//   50% {
-//     transform: scale(1.15);
-//   }
-//   100% {
-//     transform: scale(1);
-//   }
-
-// `;
-
-// .bump {
-//   animation: bump 300ms ease-out;
-// }
-
-// @keyframes bump {
-//   0% {
-//     transform: scale(1);
-//   }
-//   10% {
-//     transform: scale(0.9);
-//   }
-//   30% {
-//     transform: scale(1.1);
-//   }
-//   50% {
-//     transform: scale(1.15);
-//   }
-//   100% {
-//     transform: scale(1);
-//   }
-// }
