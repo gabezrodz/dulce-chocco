@@ -7,7 +7,7 @@ const ChocolateItemForm = (props) => {
       <Input
         label="Quantidade"
         input={{
-          id: "quantidade",
+          id:  "quantidade" + props.id,
           type: "number",
           min: "1",
           max: "5",

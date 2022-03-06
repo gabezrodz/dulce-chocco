@@ -31,7 +31,13 @@ const EX_CHOCOLATES = [
 
 const AvaliableChocolates = () => {
   const chocolatesList = EX_CHOCOLATES.map((chocolate) => (
-    <ChocolateItem key={chocolate.id} name={chocolate.name} description={chocolate.description} price={chocolate.price}/>
+    <ChocolateItem
+      id={chocolate.id}
+      key={chocolate.id}
+      name={chocolate.name}
+      description={chocolate.description}
+      price={chocolate.price}
+    />
   ));
 
   return (

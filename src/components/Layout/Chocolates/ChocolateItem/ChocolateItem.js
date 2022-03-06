@@ -10,7 +10,7 @@ const ChocolateItem = (props) => {
         <Price>${props.price.toFixed(2)}</Price>
       </div>
       <div>
-        <ChocolateItemForm />
+        <ChocolateItemForm id={props.id}/>
       </div>
     </ChocolateItemStyled>
   );
