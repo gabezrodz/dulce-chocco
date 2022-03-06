@@ -3,13 +3,24 @@ import Header from "./components/Layout/Header/Header";
 import Wrapper from "./components/Helpers/Wrapper";
 import ChocolatesList from "./components/Layout/Chocolates/ChocolatesList";
 import Cart from "./components/Layout/Cart/Cart";
+import { useState } from "react";
 
 function App() {
+  const [cartDisplay, setCartDisplay] = useState(false);
+
+  const displayCartHandler = () => {
+    setCartDisplay(true);
+  };
+
+  const hideCartHandler = () => {
+    setCartDisplay(false);
+  };
+
   return (
     <Wrapper>
-      <Header />
+     {cartDisplay && <Cart onHideCart={hideCartHandler} />}
+      <Header onDisplayCart={displayCartHandler}/>
       <main>
-        <Cart />
         <ChocolatesList />
       </main>
     </Wrapper>

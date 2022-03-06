@@ -13,14 +13,16 @@ const Cart = (props) => {
   );
 
   return (
-    <Modal>
+    <Modal  onHideCart={props.onHideCart}>
       {cartItems}
       <Total>
         <span>Quantidade Total</span>
         <span>59,98</span>
       </Total>
       <Actions>
-        <button className="button--alt">Fechar</button>
+        <button 
+        onClick={props.onHideCart}
+        className="button--alt">Fechar</button>
         <button className="button">Encomendar</button>
       </Actions>
     </Modal>

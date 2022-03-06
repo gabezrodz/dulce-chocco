@@ -8,7 +8,7 @@ const Header = (props) => {
     <Wrapper>
       <HeaderStyled>
         <h1>Dulce Chocco</h1>
-        <HeadderCartButton />
+        <HeadderCartButton onClick={props.onDisplayCart} />
       </HeaderStyled>
       <MainImage>
         <img src={bannerChocolate} alt="Banner de chocolates deliciosos!" />

@@ -2,7 +2,7 @@ import { CartButton,Icon,Badge } from "./Style";
 import CartIcon from "./CartIcon";
 const HeadderCartButton = (props) => {
   return (
-    <CartButton>
+    <CartButton onClick={props.onClick}>
       <Icon>
         <CartIcon />
       </Icon>
