@@ -21,7 +21,7 @@ const ChocolateItem = (props) => {
       <div>
         <h3>{props.name}</h3>
         <Description>{props.description}</Description>
-        <Price>${props.price.toFixed(2)}</Price>
+        <Price>R${props.price.toFixed(2)}</Price>
       </div>
       <div>
         <ChocolateItemForm onAddToCart={addToCartHandler} id={props.id} />
