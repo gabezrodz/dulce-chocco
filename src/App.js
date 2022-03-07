@@ -1,9 +1,9 @@
 import "./App.css";
 import Header from "./components/Layout/Header/Header";
-import Wrapper from "./components/Helpers/Wrapper";
 import ChocolatesList from "./components/Layout/Chocolates/ChocolatesList";
 import Cart from "./components/Layout/Cart/Cart";
 import { useState } from "react";
+import CartProvider from "./store/CartProvider";
 
 function App() {
   const [cartDisplay, setCartDisplay] = useState(false);
@@ -17,13 +17,13 @@ function App() {
   };
 
   return (
-    <Wrapper>
-     {cartDisplay && <Cart onHideCart={hideCartHandler} />}
-      <Header onDisplayCart={displayCartHandler}/>
+    <CartProvider>
+      {cartDisplay && <Cart onHideCart={hideCartHandler} />}
+      <Header onDisplayCart={displayCartHandler} />
       <main>
         <ChocolatesList />
       </main>
-    </Wrapper>
+    </CartProvider>
   );
 }
 

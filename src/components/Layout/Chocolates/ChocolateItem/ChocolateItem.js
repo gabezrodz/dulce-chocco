@@ -1,7 +1,21 @@
+import { useContext } from "react";
 import { ChocolateItemStyled, Description, Price } from "./Style";
 import ChocolateItemForm from "./ChocolateItemForm/ChocolateItemForm";
+import CartContex from "../../../../store/cart-context";
 
 const ChocolateItem = (props) => {
+  const cartCtx = useContext(CartContex);
+
+  const addToCartHandler = (amount) => {
+    cartCtx.addItem({
+      id: props.id,
+      
+      name: props.name,
+      amount: amount,
+      price: props.price,
+    });
+  };
+
   return (
     <ChocolateItemStyled>
       <div>
@@ -10,7 +24,7 @@ const ChocolateItem = (props) => {
         <Price>${props.price.toFixed(2)}</Price>
       </div>
       <div>
-        <ChocolateItemForm id={props.id}/>
+        <ChocolateItemForm onAddToCart={addToCartHandler} id={props.id} />
       </div>
     </ChocolateItemStyled>
   );
