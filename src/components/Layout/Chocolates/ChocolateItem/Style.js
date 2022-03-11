@@ -22,3 +22,12 @@ export const Price = styled.div`
   color:  #89380c;
   font-size: 1.25rem;
 `;
+
+export const ItemImage =styled.img`
+  width: 18rem;
+  height: 16rem;
+  margin: 10px 2px 0;
+  border: solid #672f0a;
+  border-radius: 5px;
+
+`

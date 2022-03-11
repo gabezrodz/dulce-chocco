@@ -1,42 +1,53 @@
+import { useEffect,useState } from "react";
 import { Chocolates } from "./Style";
 import ChocolateItem from "../ChocolateItem/ChocolateItem";
 import Card from "../../../Shared/Card/Card";
 
-const EX_CHOCOLATES = [
-  {
-    id: "c1",
-    name: "Pettit Gateou",
-    description: "Pettit Gateou recheado com chocolate suiço",
-    price: 29.99,
-  },
-  {
-    id: "c2",
-    name: "Torta de Ganache Valrhona ",
-    description: "Torta confecionada com o melhor chocolate francês",
-    price: 49.99,
-  },
-  {
-    id: "c3",
-    name: "Barra trufada",
-    description: "Barra de chocolate trufado brasileiro",
-    price: 13.99,
-  },
-  {
-    id: "c4",
-    name: "Brownie Quádruplo",
-    description: "Brownie feito com 4 tipos de chocolates",
-    price: 9.99,
-  },
-];
-
 const AvaliableChocolates = () => {
-  const chocolatesList = EX_CHOCOLATES.map((chocolate) => (
+  const [chocolates, setChocolates] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
+  useEffect(() => {
+    const fetchMeals = async () => {
+      
+      const response = await fetch(
+        "https://dulce-chocco-default-rtdb.firebaseio.com/chocolates.json"
+      );
+      const responseData = await response.json();
+
+      const loadedChocolates = [];
+
+      for (const key in responseData) {
+        loadedChocolates.push({
+          id: key,
+          name: responseData[key].name,
+          description: responseData[key].description,
+          price: responseData[key].price,
+          image: responseData[key].image,
+        });
+      }
+      setIsLoading(false)
+      setChocolates(loadedChocolates)
+    };
+
+    fetchMeals();
+  }, []);
+
+    if(isLoading){
+      return(
+        <section style={{textAlign: 'center'}}>
+          <h3 style={{color:"white"}}>Carregando...</h3>
+        </section>
+      )
+    }
+
+  const chocolatesList = chocolates.map((chocolate) => (
     <ChocolateItem
       id={chocolate.id}
       key={chocolate.id}
       name={chocolate.name}
       description={chocolate.description}
       price={chocolate.price}
+      image={chocolate.image}
     />
   ));
 
