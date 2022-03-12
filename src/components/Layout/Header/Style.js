@@ -20,6 +20,7 @@ export const HeaderStyled = styled.header`
   @media (max-width: 600px) {
     font-size: 1.1rem;
     padding: 55px 10px;
+    margin-top: -5px;
   }
 `;
 

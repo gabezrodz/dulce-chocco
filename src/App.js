@@ -23,6 +23,9 @@ function App() {
       <main>
         <ChocolatesList />
       </main>
+      <footer>
+        <h4 style={{textAlign: "center", color: "white"}}> Feito por <a target={"_blank"}  rel="noreferrer" href="https://github.com/gabezrodz">Gabriel R. Rodrigues</a></h4>
+      </footer>
     </CartProvider>
   );
 }

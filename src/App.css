@@ -8,7 +8,10 @@ body {
   margin: 0;
   font-family: "Fredoka", sans-serif;
 }
-
+a{
+  
+  color: white
+}
 .App {
   text-align: center;
 }
