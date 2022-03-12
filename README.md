@@ -1,6 +1,6 @@
 # Dulce Chocco - Chocolataria
 
-## Opa oi oi! Esse projeto foi desenvolvido em React com styled-components! Você pode acessar a aplicação <a target="_blank" href="https://climao-psi.vercel.app/">clicando aqui!</a>!
+## Opa oi oi! Esse projeto foi desenvolvido em React com styled-components! Você pode acessar a aplicação <a target="_blank" href="https://dulce-chocco.vercel.app/">clicando aqui!</a>!
 
 <img src="src/assets/image/demo-photo-1.png" width="550px" alt="imagem de demonstração desktop">
 
