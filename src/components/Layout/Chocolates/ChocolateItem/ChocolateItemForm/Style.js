@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Form = styled.form`
   text-align: right;
+  font-size: 1.2rem;
   button {
     font: inherit;
     cursor: pointer;

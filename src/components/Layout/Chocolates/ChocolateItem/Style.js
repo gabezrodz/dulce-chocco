@@ -7,13 +7,14 @@ export const ChocolateItemStyled = styled.li`
   padding-bottom: 1rem;
   border-bottom: 1px solid #ccc;
 
-  h3 {
+  h2 {
     margin: 0 0 0.25rem 0;
   }
 `;
 
 export const Description = styled.div`
   font-style: italic;
+  font-size: 1.2rem;
 `;
 
 export const Price = styled.div`

@@ -18,7 +18,7 @@ const ChocolateItem = (props) => {
   return (
     <ChocolateItemStyled>
       <div>
-        <h3>{props.name}</h3>
+        <h2>{props.name}</h2>
         <Description>{props.description}</Description>
         < ItemImage src={props.image} />
         <Price>R${props.price.toFixed(2)}</Price>
