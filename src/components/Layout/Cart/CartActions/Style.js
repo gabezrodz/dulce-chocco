@@ -1,4 +1,23 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const bump = keyframes`
+ 0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.9);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+
+`;
 
 export const CartButton = styled.button`
   cursor: pointer;
@@ -13,10 +32,15 @@ export const CartButton = styled.button`
   font-size: 1.1rem;
   font-weight: bold;
   font-family: "Fredoka", sans-serif;
+  /* animation: ${bump} 300ms ease-out; */
 
   &:hover,
   &:active {
     background-color: #89380c;
+  }
+
+  &.bump {
+    animation: ${bump} 300ms ease-out;
   }
 `;
 
