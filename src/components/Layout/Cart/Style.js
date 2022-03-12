@@ -6,6 +6,10 @@ export const CartItemsStyled = styled.ul`
   padding: 0;
   max-height: 20rem;
   overflow: auto;
+
+  @media (max-width: 1024px) {
+    max-height: 15rem;
+  }
 `;
 
 export const Total = styled.div`

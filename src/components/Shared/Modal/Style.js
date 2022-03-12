@@ -23,7 +23,7 @@ const SlideDown = keyframes`
 
 export const ModalStyled = styled.div`
   position: fixed;
-  top: 20vh;
+  top: 5vh;
   left: 25%;
   width: 50%;
   background-color: white;
