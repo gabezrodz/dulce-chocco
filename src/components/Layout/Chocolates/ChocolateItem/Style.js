@@ -10,6 +10,10 @@ export const ChocolateItemStyled = styled.li`
   h2 {
     margin: 0 0 0.25rem 0;
   }
+
+  @media(max-width: 600px){
+    flex-direction: column;
+  }
 `;
 
 export const Description = styled.div`

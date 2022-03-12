@@ -19,4 +19,9 @@ export const Form = styled.form`
       border-color: #89380c;
     }
   }
+
+  @media (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
